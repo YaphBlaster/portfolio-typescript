@@ -8,6 +8,7 @@ import { IProject } from "../../interfaces/interfaces";
 const Layout = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: row;
 
   @media screen and (max-width: ${mediumBreakPoint}) {
     flex-direction: column;
@@ -59,6 +60,11 @@ const Image = styled.img`
   border-color: #575757;
   border-style: double;
   border-width: 6.5px;
+  transition: 0.2s linear all;
+  @media screen and (max-width: 305px) {
+    width: 155px;
+    height: 155px;
+  }
 `;
 
 const TechStackContainer = styled.div`

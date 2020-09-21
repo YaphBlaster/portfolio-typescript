@@ -2,6 +2,7 @@ import React from "react";
 import * as resumeLink from "../../resume.pdf";
 import styled from "styled-components/macro";
 import NavItem from "../NavItem/NavItem";
+import { smallBreakPoint } from "../../constants";
 
 const NavWrapper = styled.div`
   display: flex;
@@ -13,6 +14,10 @@ const NavWrapper = styled.div`
   margin: 0 auto;
   margin-bottom: 20px;
   font-size: 20px;
+
+  @media screen and (max-width: ${smallBreakPoint}) {
+    flex-direction: column;
+  }
 `;
 const Navbar = () => {
   return (

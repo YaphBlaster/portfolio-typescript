@@ -7,13 +7,9 @@ import Project from "../Project/Project";
 import Title from "../Title";
 
 const Container = styled.div`
-  margin: 1.1em auto;
   display: flex;
-  max-width: 900px;
   flex-direction: column;
-  /* grid-gap: 20px; */
-  /* grid-template-columns: repeat(auto-fit, minmax(320px, 900px)); */
-  margin: 10px;
+  padding: 10px;
 
   > div {
     margin: 10px;

@@ -16,7 +16,11 @@ const Container = styled.div`
   text-align: center;
 `;
 
-const TechBox = ({ text }) => {
+interface Props {
+  text: string;
+}
+
+const TechBox = ({ text }: Props) => {
   return (
     <Container>
       <div>{text}</div>
