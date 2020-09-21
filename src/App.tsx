@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import Navbar from "./components/Navbar/Navbar";
 import Carousel from "./components/Carousel/Carousel";
 import Description from "./components/Description/Description";
@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   font-family: "Roboto Mono", monospace;
+  box-sizing: border-box;
   /* color: #785ae6 !important; */
 `;
 
@@ -23,6 +24,7 @@ const AppBoundary = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 `;
 const container = {
   hidden: { opacity: 0 },
@@ -39,30 +41,16 @@ export const item = {
   show: { opacity: 1, y: 0 },
 };
 
-const Motion = styled(motion.div)``;
-
 function App() {
   return (
     <Wrapper>
       <AppBoundary variants={container} initial="hidden" animate="show">
-        <Motion variants={item}>
-          <Navbar />
-        </Motion>
-        <Motion variants={item}>
-          <Carousel />
-        </Motion>
-        <Motion variants={item}>
-          <Description />
-        </Motion>
-        <Motion variants={item}>
-          <Skills skills={SkillList} />
-        </Motion>
-        <Motion variants={item}>
-          <ProjectContainer projects={Projects} />
-        </Motion>
-        <Motion variants={item}>
-          <Contact />
-        </Motion>
+        <Navbar />
+        <Carousel />
+        <Description />
+        <Skills skills={SkillList} />
+        <ProjectContainer projects={Projects} />
+        <Contact />
       </AppBoundary>
     </Wrapper>
   );

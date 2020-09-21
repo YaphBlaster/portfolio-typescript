@@ -20,6 +20,9 @@ const InnerText = styled.div`
   flex-direction: column;
   margin-left: 15px;
   text-align: left;
+  @media screen and (max-width: ${mediumBreakPoint}) {
+    margin-left: auto;
+  }
 `;
 
 const Tile = styled.div`

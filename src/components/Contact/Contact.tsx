@@ -21,16 +21,13 @@ const Contact = () => {
       <IconContainer>
         <ContactIcon
           icon={emailIcon}
-          href="mailto: stephanie.pops@gmail.com"
+          href="mailto: yaphet.abraha@gmail.com"
           isEmail
         />
-        <ContactIcon
-          icon={gitHubIcon}
-          href="https://github.com/stephaniepops"
-        />
+        <ContactIcon icon={gitHubIcon} href="https://github.com/Yaphblaster" />
         <ContactIcon
           icon={linkedinIcon}
-          href="https://www.linkedin.com/in/stephaniepops"
+          href="https://www.linkedin.com/in/yaphet-abraha"
         />
       </IconContainer>
     </Element>

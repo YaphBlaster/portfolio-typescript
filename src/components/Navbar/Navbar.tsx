@@ -9,14 +9,21 @@ const NavWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   border: none;
-
   max-width: 400px;
-  margin: 0 auto;
   margin-bottom: 20px;
   font-size: 20px;
+  width: 100%;
+  align-items: center;
+
+  > a,
+  > button {
+    margin: 18px;
+  }
 
   @media screen and (max-width: ${smallBreakPoint}) {
     flex-direction: column;
+    max-width: 100%;
+    align-items: flex-end;
   }
 `;
 const Navbar = () => {

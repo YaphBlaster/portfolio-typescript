@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components/macro";
 import { motion } from "framer-motion";
+import { ISkill } from "../../interfaces/interfaces";
 
 const Logo = styled(motion.img)`
   height: 75px;
@@ -18,12 +19,7 @@ const Text = styled.div`
   margin: 20px;
 `;
 
-interface Props {
-  name: string;
-  image: string;
-}
-
-const Skill = ({ name, image }: Props) => {
+const Skill = ({ name, image }: ISkill) => {
   return (
     <Container>
       <Logo
