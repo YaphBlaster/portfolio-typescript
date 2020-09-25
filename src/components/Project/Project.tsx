@@ -65,6 +65,13 @@ const Image = styled.img`
   border-style: double;
   border-width: 6.5px;
   transition: 0.2s linear all;
+  image-rendering: optimizeSpeed; /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges; /* Firefox                        */
+  image-rendering: -o-crisp-edges; /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: optimize-contrast; /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; /* IE8+                           */
+
   @media screen and (max-width: ${smallBreakPoint}) {
     width: 150px;
     height: 150px;

@@ -20,14 +20,3 @@ code {
   transform: rotate(-45deg);
   font-size: 1.5em;
 }
-
-@font-face {
-  font-family: "DiamondsLight";
-  src: local("DiamondsLight"), url(./fonts//DiamondsLight.otf) format("woff");
-}
-
-@font-face {
-  font-family: "DankMono-Regular";
-  src: local("DankMono-Regular"),
-    url(./fonts//DankMono-Regular.ttf) format("truetype");
-}
