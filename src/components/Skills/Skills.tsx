@@ -4,6 +4,7 @@ import Skill from "../Skill/Skill";
 import styled from "styled-components/macro";
 import Title from "../Title";
 import { ISkill } from "../../interfaces/interfaces";
+import FadeIn from "../FadeIn/FadeIn";
 
 const ElementStyled = styled(Element)`
   width: 100%;
@@ -26,14 +27,16 @@ interface Props {
 
 const Skills = ({ skills }: Props) => {
   return (
-    <ElementStyled name="skills">
-      <Title>Skills</Title>
-      <SkillsContainer>
-        {skills.map((skill, index) => (
-          <Skill {...skill} key={index} />
-        ))}
-      </SkillsContainer>
-    </ElementStyled>
+    <FadeIn>
+      <ElementStyled name="skills">
+        <Title>Skills</Title>
+        <SkillsContainer>
+          {skills.map((skill, index) => (
+            <Skill {...skill} key={index} />
+          ))}
+        </SkillsContainer>
+      </ElementStyled>
+    </FadeIn>
   );
 };
 

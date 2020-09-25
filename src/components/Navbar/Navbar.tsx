@@ -3,6 +3,7 @@ import * as resumeLink from "../../resume.pdf";
 import styled from "styled-components/macro";
 import NavItem from "../NavItem/NavItem";
 import { smallBreakPoint } from "../../constants";
+import FadeIn from "../FadeIn/FadeIn";
 
 const NavWrapper = styled.div`
   display: flex;
@@ -28,13 +29,15 @@ const NavWrapper = styled.div`
 `;
 const Navbar = () => {
   return (
-    <NavWrapper>
-      <a href={resumeLink} target="_blank" rel="noopener noreferrer">
-        <NavItem name="Resume"></NavItem>
-      </a>
-      <NavItem name="Projects" link="projects"></NavItem>
-      <NavItem name="Contact" link="contact"></NavItem>
-    </NavWrapper>
+    <FadeIn>
+      <NavWrapper>
+        <a href={resumeLink} target="_blank" rel="noopener noreferrer">
+          <NavItem name="Resume"></NavItem>
+        </a>
+        <NavItem name="Projects" link="projects"></NavItem>
+        <NavItem name="Contact" link="contact"></NavItem>
+      </NavWrapper>
+    </FadeIn>
   );
 };
 

@@ -6,17 +6,18 @@ import Description from "./components/Description/Description";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 import ProjectContainer from "./components/ProjectContainer/ProjectContainer";
-import { Projects, SkillList } from "./data/UserInfo";
+import { fontAndAccentColour, projects, skillList } from "./data/UserInfo";
 import { motion } from "framer-motion";
+import { addBackToTop } from "vanilla-back-to-top";
 
 const Wrapper = styled.div`
-  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
   padding: 15px;
   display: flex;
   justify-content: center;
   font-family: "Roboto Mono", monospace;
   box-sizing: border-box;
-  /* color: #785ae6 !important; */
+  color: ${fontAndAccentColour};
 `;
 
 const AppBoundary = styled(motion.div)`
@@ -44,12 +45,18 @@ export const item = {
 function App() {
   return (
     <Wrapper>
+      {addBackToTop({
+        diameter: 56,
+        backgroundColor: fontAndAccentColour,
+        textColor: "#fff",
+        innerHTML: "<div id='back-to-top-inner'>🚀</div>",
+      })}
       <AppBoundary variants={container} initial="hidden" animate="show">
         <Navbar />
         <Carousel />
         <Description />
-        <Skills skills={SkillList} />
-        <ProjectContainer projects={Projects} />
+        <Skills skills={skillList} />
+        <ProjectContainer projects={projects} />
         <Contact />
       </AppBoundary>
     </Wrapper>
