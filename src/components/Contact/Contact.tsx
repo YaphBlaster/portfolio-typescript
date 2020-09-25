@@ -6,34 +6,37 @@ import linkedinIcon from "../../assets/linkedIn.svg";
 import emailIcon from "../../assets/email.svg";
 import ContactIcon from "../ContactIcon/ContactIcon";
 import Title from "../Title";
+import FadeIn from "../FadeIn/FadeIn";
 
 const IconContainer = styled.div`
   display: flex;
-  width: 100vw;
   justify-content: space-between;
-  max-width: 200px;
+  width: 250px;
+  margin: 0 auto;
 `;
 
 const Contact = () => {
   return (
-    <Element name="contact">
-      <Title>Contact</Title>
-      <IconContainer>
-        <ContactIcon
-          icon={emailIcon}
-          href="mailto: stephanie.pops@gmail.com"
-          isEmail
-        />
-        <ContactIcon
-          icon={gitHubIcon}
-          href="https://github.com/stephaniepops"
-        />
-        <ContactIcon
-          icon={linkedinIcon}
-          href="https://www.linkedin.com/in/stephaniepops"
-        />
-      </IconContainer>
-    </Element>
+    <FadeIn>
+      <Element name="contact">
+        <Title>Contact</Title>
+        <IconContainer>
+          <ContactIcon
+            icon={emailIcon}
+            href="mailto: yaphet.abraha@gmail.com"
+            isEmail
+          />
+          <ContactIcon
+            icon={gitHubIcon}
+            href="https://github.com/Yaphblaster"
+          />
+          <ContactIcon
+            icon={linkedinIcon}
+            href="https://www.linkedin.com/in/yaphet-abraha"
+          />
+        </IconContainer>
+      </Element>
+    </FadeIn>
   );
 };
 

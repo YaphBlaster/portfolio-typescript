@@ -1,11 +1,16 @@
 import React from "react";
 import styled from "styled-components/macro";
 import { motion } from "framer-motion";
+import { ISkill } from "../../interfaces/interfaces";
+import { ReactSVG } from "react-svg";
 
-const Logo = styled(motion.img)`
+const Logo = styled(ReactSVG)`
   height: 75px;
   width: 75px;
+  fill: #2b2b2b;
 `;
+
+const LogoContainer = styled(motion.div)``;
 
 const Container = styled.div`
   display: flex;
@@ -18,22 +23,17 @@ const Text = styled.div`
   margin: 20px;
 `;
 
-interface Props {
-  name: string;
-  image: string;
-}
-
-const Skill = ({ name, image }: Props) => {
+const Skill = ({ name, image }: ISkill) => {
   return (
     <Container>
-      <Logo
+      <LogoContainer
         whileHover={{
           scale: 1.1,
           transition: { duration: 0.1, ease: "easeInOut" },
         }}
-        src={image}
-        alt={name}
-      />
+      >
+        <Logo src={image} />
+      </LogoContainer>
       <Text>{name}</Text>
     </Container>
   );

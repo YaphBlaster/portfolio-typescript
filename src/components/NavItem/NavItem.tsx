@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 
 const NavLink = styled(motion.button)`
   cursor: pointer;
-  margin: 18px;
   border: none;
   background-color: transparent;
   font-family: "Roboto Mono", monospace;

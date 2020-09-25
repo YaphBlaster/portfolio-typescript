@@ -4,13 +4,21 @@ import Skill from "../Skill/Skill";
 import styled from "styled-components/macro";
 import Title from "../Title";
 import { ISkill } from "../../interfaces/interfaces";
+import FadeIn from "../FadeIn/FadeIn";
+
+const ElementStyled = styled(Element)`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const SkillsContainer = styled.div`
   display: grid;
-  width: 100vw;
   grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
   max-width: 850px;
   grid-gap: 10px;
+  width: 100%;
 `;
 
 interface Props {
@@ -19,14 +27,16 @@ interface Props {
 
 const Skills = ({ skills }: Props) => {
   return (
-    <Element name="skills">
-      <Title>Skills</Title>
-      <SkillsContainer>
-        {skills.map((skill, index) => (
-          <Skill {...skill} key={index} />
-        ))}
-      </SkillsContainer>
-    </Element>
+    <FadeIn>
+      <ElementStyled name="skills">
+        <Title>Skills</Title>
+        <SkillsContainer>
+          {skills.map((skill, index) => (
+            <Skill {...skill} key={index} />
+          ))}
+        </SkillsContainer>
+      </ElementStyled>
+    </FadeIn>
   );
 };
 

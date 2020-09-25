@@ -1018,7 +1018,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.5.1":
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.5.1":
   version "7.11.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
@@ -1468,6 +1468,13 @@
     "@svgr/plugin-jsx" "^4.3.3"
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
+
+"@tanem/svg-injector@^8.0.68":
+  version "8.0.69"
+  resolved "https://registry.yarnpkg.com/@tanem/svg-injector/-/svg-injector-8.0.69.tgz#ef41afc98c3c706ef16f7468991f558a82e567c9"
+  integrity sha512-/F4v9aXqvoa0bg+m0m/eRHnYkPxkkAfakLcB/hRIHQ9Fqwuxz1JBDxQ0xcgNkEJI4dN9uCCvAIUIoUoQieAp6g==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
 
 "@testing-library/dom@*":
   version "7.24.2"
@@ -8853,6 +8860,15 @@ react-scroll@^1.8.1:
     lodash.throttle "^4.1.1"
     prop-types "^15.7.2"
 
+react-svg@^11.0.40:
+  version "11.0.40"
+  resolved "https://registry.yarnpkg.com/react-svg/-/react-svg-11.0.40.tgz#0cb93a07e20b747b7b1a118ea14ccbb25ef5c093"
+  integrity sha512-uNsWS2o65NmUey7MppPVWTFeyYxfe6b82g5+rJcxjJGAfm3SAiA+oSfuDD+fjpJJLMCoWkBJoyCzNuV3FTVLVg==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@tanem/svg-injector" "^8.0.68"
+    prop-types "^15.7.2"
+
 react@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
@@ -10547,6 +10563,11 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+vanilla-back-to-top@^7.2.1:
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/vanilla-back-to-top/-/vanilla-back-to-top-7.2.1.tgz#809e7d6d088de6b136682f601b1bed6c0af658aa"
+  integrity sha512-AZiYYmoe0RTbzTQs/reoXyCVqT20+cerQOsnmM/WYPJRwOAZjH0GRaWLw8QKhXcpch1UsLJHg7IwbvvzUPrcLg==
 
 vary@~1.1.2:
   version "1.1.2"

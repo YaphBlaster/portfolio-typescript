@@ -17,22 +17,28 @@ import wowVr from "../assets/projectThumbnails/WowVr.jpg";
 import CSHOF from "../assets/projectThumbnails/CSHOF.jpg";
 import patioBuilder from "../assets/projectThumbnails/PatioBuilder.jpg";
 import garageBuilder from "../assets/projectThumbnails/GarageBuilder.jpg";
-import portfolio from "../assets/businessman.svg";
+import portfolio from "../assets/jacket.svg";
+import portfolio2 from "../assets/tie.svg";
+import portfolio3 from "../assets/sweater.svg";
 import innovationLab from "../assets/projectThumbnails/InnovationLab.png";
 import wawanesa from "../assets/projectThumbnails/WawanesaLogo.svg";
 import hypemoji from "../assets/projectThumbnails/HypeMoji.png";
 import arHouse from "../assets/projectThumbnails/ARHouse.png";
-import peggoARImage from "../assets/projectThumbnails/PeggoARImage.jpg";
+// import peggoARImage from "../assets/projectThumbnails/PeggoARImage.jpg";
 import ReactCrashCourse from "../assets/projectThumbnails/ReactLogo.png";
 
-export const Summary = `I am a developer in Winnipeg, Manitoba. 
+const portfolioImages = [portfolio, portfolio2, portfolio3];
+
+export const fontAndAccentColour = "#2b2b2b";
+
+export const summary = `I am a developer in Winnipeg, Manitoba. 
 I've worked with various technologies ranging from frontend applications using React and JavaScript to backend services using Serverless and AWS Lambda to virtual reality using Unity and Unreal Engine. 
 I love working on projects that challenge and help me grow to become a better programmer. 
 Thanks for visiting my portfolio and please check out my projects down below!`;
 
-export const Name = "Yaphet Abraha";
+export const name = "Yaphet Abraha";
 
-export const Projects = [
+export const projects = [
   {
     title: "React Crash Course",
     description:
@@ -104,19 +110,10 @@ export const Projects = [
     title: "Portfolio",
     description:
       "This website! I wanted some more experience working with ReactJS, Sass, and web in general so I decided a portfolio page would be a great learning experience! Feel free to view the github repository linked below.",
-    techStack: [
-      "ReactJS",
-      "Javascript",
-      "Sass",
-      "Enzyme",
-      "Mocha",
-      "Chai",
-      "HTML5",
-      "CSS3",
-    ],
+    techStack: ["ReactJS", "Javascript", "TypeScript", "Styled Components"],
     codeLink: "https://github.com/YaphBlaster/Portfolio",
     year: 9999,
-    image: portfolio,
+    image: portfolioImages[Math.floor(Math.random() * portfolioImages.length)],
   },
   {
     title: "Wawanesa Innovation Dashboard",
@@ -171,7 +168,7 @@ export const Projects = [
   },
 ];
 
-export const SkillList = [
+export const skillList = [
   {
     name: "React",
     image: react,
@@ -218,7 +215,7 @@ export const SkillList = [
     url: "",
   },
   {
-    name: "C SHarp",
+    name: "C Sharp",
     image: csharp,
     url: "",
   },

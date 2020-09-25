@@ -1,21 +1,23 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import Navbar from "./components/Navbar/Navbar";
 import Carousel from "./components/Carousel/Carousel";
 import Description from "./components/Description/Description";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 import ProjectContainer from "./components/ProjectContainer/ProjectContainer";
-import { Projects, SkillList } from "./data/UserInfo";
+import { fontAndAccentColour, projects, skillList } from "./data/UserInfo";
 import { motion } from "framer-motion";
+import { addBackToTop } from "vanilla-back-to-top";
 
 const Wrapper = styled.div`
-  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
   padding: 15px;
   display: flex;
   justify-content: center;
   font-family: "Roboto Mono", monospace;
-  /* color: #785ae6 !important; */
+  box-sizing: border-box;
+  color: ${fontAndAccentColour};
 `;
 
 const AppBoundary = styled(motion.div)`
@@ -23,6 +25,7 @@ const AppBoundary = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 `;
 const container = {
   hidden: { opacity: 0 },
@@ -39,30 +42,22 @@ export const item = {
   show: { opacity: 1, y: 0 },
 };
 
-const Motion = styled(motion.div)``;
-
 function App() {
   return (
     <Wrapper>
+      {addBackToTop({
+        diameter: 56,
+        backgroundColor: fontAndAccentColour,
+        textColor: "#fff",
+        innerHTML: "<div id='back-to-top-inner'>🚀</div>",
+      })}
       <AppBoundary variants={container} initial="hidden" animate="show">
-        <Motion variants={item}>
-          <Navbar />
-        </Motion>
-        <Motion variants={item}>
-          <Carousel />
-        </Motion>
-        <Motion variants={item}>
-          <Description />
-        </Motion>
-        <Motion variants={item}>
-          <Skills skills={SkillList} />
-        </Motion>
-        <Motion variants={item}>
-          <ProjectContainer projects={Projects} />
-        </Motion>
-        <Motion variants={item}>
-          <Contact />
-        </Motion>
+        <Navbar />
+        <Carousel />
+        <Description />
+        <Skills skills={skillList} />
+        <ProjectContainer projects={projects} />
+        <Contact />
       </AppBoundary>
     </Wrapper>
   );

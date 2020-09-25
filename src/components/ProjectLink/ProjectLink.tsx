@@ -1,11 +1,16 @@
 import React from "react";
 import styled from "styled-components/macro";
 import { motion } from "framer-motion";
+import { ReactSVG } from "react-svg";
+import { fontAndAccentColour } from "../../data/UserInfo";
 
-const Icon = styled(motion.img)`
+const Icon = styled(ReactSVG)`
   width: 40px;
   height: 40px;
+  fill: ${fontAndAccentColour};
 `;
+
+const AnchorMotion = styled(motion.a)``;
 
 interface Props {
   link?: string;
@@ -14,15 +19,20 @@ interface Props {
 
 const ProjectLink = ({ link, icon }: Props) => {
   return (
-    <a href={link}>
+    <AnchorMotion
+      href={link}
+      whileHover={{
+        rotate: [0, 10, 0, -10, 0, 10, 0, -10, 0],
+        transition: { duration: 0.4 },
+      }}
+    >
       <Icon
-        whileHover={{
-          rotate: [0, 10, 0, -10, 0, 10, 0, -10, 0],
-          transition: { duration: 0.4 },
-        }}
         src={icon}
+        beforeInjection={(svg: any) => {
+          svg.setAttribute("style", "width: 40px; height: 40px;");
+        }}
       />
-    </a>
+    </AnchorMotion>
   );
 };
 

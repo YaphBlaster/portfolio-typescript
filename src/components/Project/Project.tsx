@@ -8,6 +8,7 @@ import { IProject } from "../../interfaces/interfaces";
 const Layout = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: row;
 
   @media screen and (max-width: ${mediumBreakPoint}) {
     flex-direction: column;
@@ -19,12 +20,16 @@ const InnerText = styled.div`
   flex-direction: column;
   margin-left: 15px;
   text-align: left;
+  @media screen and (max-width: ${mediumBreakPoint}) {
+    margin-left: auto;
+  }
 `;
 
 const Tile = styled.div`
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
+  box-shadow: 8px 4px 15px 5px #1111110d;
   box-shadow: 8px 4px 15px 5px #0000000d;
   text-align: center;
   padding: 30px;
@@ -59,6 +64,11 @@ const Image = styled.img`
   border-color: #575757;
   border-style: double;
   border-width: 6.5px;
+  transition: 0.2s linear all;
+  @media screen and (max-width: ${smallBreakPoint}) {
+    width: 150px;
+    height: 150px;
+  }
 `;
 
 const TechStackContainer = styled.div`

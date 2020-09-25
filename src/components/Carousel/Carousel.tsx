@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import ProfilePhoto from "../../assets/businessman.svg";
-import ProfilePhoto2 from "../../assets/hipster.svg";
-import ProfilePhoto3 from "../../assets/fancy.svg";
-import ProfilePhoto4 from "../../assets/hipster2.svg";
-import ProfilePhoto5 from "../../assets/fancy2.svg";
+import ProfilePhoto from "../../assets/sweater.svg";
+import ProfilePhoto2 from "../../assets/tie.svg";
+import ProfilePhoto3 from "../../assets/jacket.svg";
 import styled from "styled-components/macro";
 import { AnimatePresence, motion } from "framer-motion";
-import { Name as userInfoName } from "../../data/UserInfo";
+import { name as userInfoName } from "../../data/UserInfo";
 
 import { wrap } from "@popmotion/popcorn";
+import { ReactSVG } from "react-svg";
+import FadeIn from "../FadeIn/FadeIn";
 
 const variants = {
   enter: {
@@ -32,20 +32,24 @@ const variants = {
   },
 };
 
-const HeaderImage = styled(motion.img)`
-  height: 250px;
-  width: 250px;
+const ReactSVGStyled = styled(ReactSVG)`
+  svg {
+    height: 277px;
+    width: auto;
+  }
+`;
+
+const IconContainer = styled(motion.div)`
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   margin: 15px;
   cursor: pointer;
-  /* animation: hueChange 20s infinite; */
-  @keyframes hueChange {
-    from {
-      filter: hue-rotate(0deg);
-    }
-    to {
-      filter: hue-rotate(260deg);
-    }
-  }
 `;
 
 const HeaderWrapper = styled.div`
@@ -55,6 +59,9 @@ const HeaderWrapper = styled.div`
   align-items: center;
   position: relative;
   height: 250px;
+  outline: 0;
+
+  user-select: none;
 `;
 
 const Name = styled.div`
@@ -67,20 +74,19 @@ const Name = styled.div`
 
 const Carousel = () => {
   const [page, setPage] = useState(0);
-  const images = [
-    ProfilePhoto,
-    ProfilePhoto2,
-    ProfilePhoto3,
-    ProfilePhoto4,
-    ProfilePhoto5,
-  ];
+  const [hasPreloadedImages, setHasPreloadedImages] = useState(false);
+  const images = [ProfilePhoto, ProfilePhoto2, ProfilePhoto3];
 
   useEffect(() => {
-    images.forEach((picture) => {
-      const img = new Image();
-      img.src = picture;
-    });
-  }, [images]);
+    if (!hasPreloadedImages) {
+      images.forEach((picture) => {
+        const img = new Image();
+        img.src = picture;
+      });
+    } else {
+      setHasPreloadedImages(true);
+    }
+  }, [images, hasPreloadedImages]);
 
   // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
   // then wrap that within 0-2 to find our image ID in the array below. By passing an
@@ -89,13 +95,11 @@ const Carousel = () => {
   const imageIndex = wrap(0, images.length, page);
 
   return (
-    <div>
+    <FadeIn>
       <HeaderWrapper>
         <AnimatePresence initial={false} exitBeforeEnter>
-          <HeaderImage
-            onClick={() => setPage(page + 1)}
+          <IconContainer
             key={page}
-            src={images[imageIndex]}
             variants={variants}
             initial="enter"
             animate="center"
@@ -105,11 +109,17 @@ const Carousel = () => {
               dampening: 100,
               duration: 0.2,
             }}
-          />
+          >
+            <ReactSVGStyled
+              src={images[imageIndex]}
+              onClick={() => setPage(page + 1)}
+            />
+          </IconContainer>
         </AnimatePresence>
       </HeaderWrapper>
+
       <Name>{userInfoName}</Name>
-    </div>
+    </FadeIn>
   );
 };
 
