@@ -7,12 +7,22 @@ import emailIcon from "../../assets/email.svg";
 import ContactIcon from "../ContactIcon/ContactIcon";
 import Title from "../Title";
 import FadeIn from "../FadeIn/FadeIn";
+import { smallBreakPoint } from "../../constants";
 
 const IconContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 250px;
   margin: 0 auto;
+
+  @media screen and (max-width: ${smallBreakPoint}) {
+    width: 180px;
+
+    svg {
+      height: 45px;
+      width: 45px;
+    }
+  }
 `;
 
 const Contact = () => {
