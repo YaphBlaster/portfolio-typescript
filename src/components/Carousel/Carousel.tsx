@@ -7,7 +7,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { name as userInfoName } from "../../data/UserInfo";
 
 import { wrap } from "@popmotion/popcorn";
-import { ReactSVG } from "react-svg";
 import FadeIn from "../FadeIn/FadeIn";
 
 const variants = {
@@ -32,26 +31,6 @@ const variants = {
   },
 };
 
-const ReactSVGStyled = styled(ReactSVG)`
-  svg {
-    height: 277px;
-    width: auto;
-  }
-`;
-
-const IconContainer = styled(motion.div)`
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  margin: 15px;
-  cursor: pointer;
-`;
-
 const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -70,6 +49,20 @@ const Name = styled.div`
   text-align: center;
   margin-top: 15px;
   margin-bottom: 20px;
+`;
+
+const HeaderImage = styled(motion.img)`
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 277px;
+  width: auto;
+  margin: 15px;
+  cursor: pointer;
 `;
 
 const Carousel = () => {
@@ -98,7 +91,9 @@ const Carousel = () => {
     <FadeIn>
       <HeaderWrapper>
         <AnimatePresence initial={false} exitBeforeEnter>
-          <IconContainer
+          <HeaderImage
+            src={images[imageIndex]}
+            onClick={() => setPage(page + 1)}
             key={page}
             variants={variants}
             initial="enter"
@@ -109,12 +104,7 @@ const Carousel = () => {
               dampening: 100,
               duration: 0.2,
             }}
-          >
-            <ReactSVGStyled
-              src={images[imageIndex]}
-              onClick={() => setPage(page + 1)}
-            />
-          </IconContainer>
+          />
         </AnimatePresence>
       </HeaderWrapper>
 
