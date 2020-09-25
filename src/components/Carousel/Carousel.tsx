@@ -8,6 +8,7 @@ import { name as userInfoName } from "../../data/UserInfo";
 
 import { wrap } from "@popmotion/popcorn";
 import FadeIn from "../FadeIn/FadeIn";
+import { smallBreakPoint } from "../../constants";
 
 const variants = {
   enter: {
@@ -63,6 +64,10 @@ const HeaderImage = styled(motion.img)`
   width: auto;
   margin: 15px;
   cursor: pointer;
+
+  @media screen and (max-width: ${smallBreakPoint}) {
+    height: 250px;
+  }
 `;
 
 const Carousel = () => {

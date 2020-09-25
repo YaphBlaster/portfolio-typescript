@@ -13,7 +13,7 @@ const NavWrapper = styled.div`
   max-width: 400px;
   margin-bottom: 20px;
   font-size: 20px;
-  width: 100%;
+  width: 100vw;
   align-items: center;
 
   > a,
