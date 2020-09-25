@@ -12,21 +12,21 @@ import unrealEngine from "../assets/logos/unrealengine.svg";
 import styledComponents from "../assets/logos/styled-components.svg";
 import javaScript from "../assets/logos/javascript.svg";
 
-import prequelMemes from "../assets/projectThumbnails/PrequelMemes.png";
-import wowVr from "../assets/projectThumbnails/WowVr.jpg";
-import CSHOF from "../assets/projectThumbnails/CSHOF.jpg";
-import patioBuilder from "../assets/projectThumbnails/PatioBuilder.jpg";
-import garageBuilder from "../assets/projectThumbnails/GarageBuilder.jpg";
+import prequelMemes from "../assets/projectThumbnails/PrequelMemes.webp";
+import wowVr from "../assets/projectThumbnails/WowVr.webp";
+import CSHOF from "../assets/projectThumbnails/CSHOF.webp";
+import patioBuilder from "../assets/projectThumbnails/PatioBuilder.webp";
+import garageBuilder from "../assets/projectThumbnails/GarageBuilder.webp";
+import innovationLab from "../assets/projectThumbnails/InnovationLab.webp";
+import wawanesa from "../assets/projectThumbnails/WawanesaLogo.svg";
+import hypemoji from "../assets/projectThumbnails/HypeMoji.webp";
+import arHouse from "../assets/projectThumbnails/ARHouse.webp";
+// import peggoARImage from "../assets/projectThumbnails/PeggoARImage.webp";
+import ReactCrashCourse from "../assets/projectThumbnails/ReactLogo.webp";
+
 import portfolio from "../assets/jacket.svg";
 import portfolio2 from "../assets/tie.svg";
 import portfolio3 from "../assets/sweater.svg";
-import innovationLab from "../assets/projectThumbnails/InnovationLab.png";
-import wawanesa from "../assets/projectThumbnails/WawanesaLogo.svg";
-import hypemoji from "../assets/projectThumbnails/HypeMoji.png";
-import arHouse from "../assets/projectThumbnails/ARHouse.png";
-// import peggoARImage from "../assets/projectThumbnails/PeggoARImage.jpg";
-import ReactCrashCourse from "../assets/projectThumbnails/ReactLogo.png";
-
 const portfolioImages = [portfolio, portfolio2, portfolio3];
 
 export const fontAndAccentColour = "#2b2b2b";
