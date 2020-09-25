@@ -18,7 +18,7 @@ const SkillsContainer = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
   max-width: 850px;
   grid-gap: 10px;
-  width: 100%;
+  width: 100vw;
 `;
 
 interface Props {
