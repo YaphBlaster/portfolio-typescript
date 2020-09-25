@@ -52,21 +52,6 @@ const IconContainer = styled(motion.div)`
   cursor: pointer;
 `;
 
-const HeaderImage = styled(motion.img)`
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  height: 250px;
-  width: 250px;
-  margin: 15px;
-  cursor: pointer;
-`;
-
 const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
