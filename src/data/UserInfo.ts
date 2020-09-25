@@ -11,6 +11,7 @@ import unity from "../assets/logos/unity.svg";
 import unrealEngine from "../assets/logos/unrealengine.svg";
 import styledComponents from "../assets/logos/styled-components.svg";
 import javaScript from "../assets/logos/javascript.svg";
+import typeScript from "../assets/logos/typescript.svg";
 
 import prequelMemes from "../assets/projectThumbnails/PrequelMemes.webp";
 import wowVr from "../assets/projectThumbnails/WowVr.webp";
@@ -110,13 +111,7 @@ export const projects = [
     title: "Portfolio",
     description:
       "This website! I wanted some more experience working with ReactJS, TypeScript, and web in general so I decided a portfolio page would be a great learning experience! Feel free to view the github repository linked on the side.",
-    techStack: [
-      "ReactJS",
-      "Javascript",
-      "TypeScript",
-      "Styled Components",
-      "Netlify",
-    ],
+    techStack: ["ReactJS", "TypeScript", "Styled Components", "Netlify"],
     codeLink: "https://github.com/YaphBlaster/Portfolio",
     year: 9999,
     image: portfolioImages[Math.floor(Math.random() * portfolioImages.length)],
@@ -193,6 +188,11 @@ export const skillList = [
   {
     name: "JavaScript",
     image: javaScript,
+    url: "",
+  },
+  {
+    name: "TypeScript",
+    image: typeScript,
     url: "",
   },
   {

@@ -6,6 +6,11 @@ import { fontAndAccentColour } from "../../data/UserInfo";
 
 const LinkIcon = styled(ReactSVG)`
   fill: ${fontAndAccentColour};
+  svg {
+    transition: 0.2s linear all;
+    height: 60px;
+    width: 60px;
+  }
 `;
 
 interface Props {
@@ -27,12 +32,7 @@ const ContactIcon = ({ href, icon, isEmail = false }: Props) => {
           transition: { duration: 0.4 },
         }}
       >
-        <LinkIcon
-          src={icon}
-          beforeInjection={(svg: any) => {
-            svg.setAttribute("style", "width: 60px; height: 60px;");
-          }}
-        />
+        <LinkIcon src={icon} />
       </motion.div>
     </a>
   );
