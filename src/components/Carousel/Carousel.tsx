@@ -12,23 +12,23 @@ import { smallBreakPoint } from "../../constants";
 
 const variants = {
   enter: {
-    scaleX: [0.95, 1.05],
+    scaleX: [0.97, 1.03],
 
-    scaleY: 1.05,
-    scale: [0.95, 1.05],
+    scaleY: 1.03,
+    scale: [0.97, 1.03],
   },
   center: {
     opacity: 1,
     scaleX: 1,
     scaleY: 1,
     scale: 1,
-    rotate: [0, 10, 0, -10, 0],
+    rotate: [0, 5, 0, -5, 0],
   },
   exit: {
-    scaleX: [0.95, 1.05],
-    scaleY: 1.05,
-    scale: [0.95, 1.05],
-    rotate: [0, 10, 0, -10, 0],
+    scaleX: [0.97, 1.03],
+    scaleY: 1.03,
+    scale: [0.97, 1.03],
+    rotate: [0, 5, 0, -5, 0],
   },
 };
 
