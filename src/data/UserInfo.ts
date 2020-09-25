@@ -109,7 +109,7 @@ export const projects = [
   {
     title: "Portfolio",
     description:
-      "This website! I wanted some more experience working with ReactJS, Sass, and web in general so I decided a portfolio page would be a great learning experience! Feel free to view the github repository linked below.",
+      "This website! I wanted some more experience working with ReactJS, TypeScript, and web in general so I decided a portfolio page would be a great learning experience! Feel free to view the github repository linked on the side.",
     techStack: [
       "ReactJS",
       "Javascript",

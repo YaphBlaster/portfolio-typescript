@@ -86,6 +86,11 @@ const Carousel = () => {
     }
   }, [images, hasPreloadedImages]);
 
+  const handleClick = () => {
+    setPage(page + 1);
+    window.navigator.vibrate(10);
+  };
+
   // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
   // then wrap that within 0-2 to find our image ID in the array below. By passing an
   // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
@@ -98,7 +103,7 @@ const Carousel = () => {
         <AnimatePresence initial={false} exitBeforeEnter>
           <HeaderImage
             src={images[imageIndex]}
-            onClick={() => setPage(page + 1)}
+            onClick={handleClick}
             key={page}
             variants={variants}
             initial="enter"
