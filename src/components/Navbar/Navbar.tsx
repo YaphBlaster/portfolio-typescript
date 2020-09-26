@@ -11,7 +11,6 @@ const NavWrapper = styled.div`
   justify-content: space-between;
   border: none;
   margin-bottom: 20px;
-  font-size: 20px;
   align-items: center;
   justify-content: center;
 

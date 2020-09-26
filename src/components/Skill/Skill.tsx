@@ -3,10 +3,18 @@ import styled from "styled-components/macro";
 import { motion } from "framer-motion";
 import { ISkill } from "../../interfaces/interfaces";
 import { ReactSVG } from "react-svg";
+import { smallBreakPoint } from "../../constants";
 
 const Logo = styled(ReactSVG)`
-  height: 75px;
-  width: 75px;
+  svg {
+    height: 72px;
+    width: 72px;
+
+    @media screen and (max-width: ${smallBreakPoint}) {
+      height: 65px;
+      width: 65px;
+    }
+  }
   fill: #2b2b2b;
 `;
 
@@ -20,7 +28,8 @@ const Container = styled.div`
 
 const Text = styled.div`
   text-align: center;
-  margin: 20px;
+  margin-top: 10px;
+  font-size: 1em;
 `;
 
 const Skill = ({ name, image }: ISkill) => {
