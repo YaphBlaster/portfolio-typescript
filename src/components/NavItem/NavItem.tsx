@@ -25,7 +25,6 @@ interface Props {
 const NavItem = ({ name, link }: Props) => {
   return (
     <NavLink
-      whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={() => {
         if (link)

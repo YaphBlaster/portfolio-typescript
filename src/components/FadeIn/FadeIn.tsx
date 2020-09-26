@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components/macro";
 
-const Motion = styled(motion.div)``;
+const Motion = styled(motion.div)`
+  width: 100%;
+`;
 
 const item = {
   hidden: { opacity: 0, y: -20 },
