@@ -38,21 +38,19 @@ const HeaderWrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 250px;
   outline: 0;
 
   user-select: none;
 `;
 
 const Name = styled.div`
-  font-size: 2.5em;
-  font-weight: 500;
+  font-size: 2.7em;
   text-align: center;
   margin-top: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 2.2rem;
 
   @media screen and (max-width: ${smallBreakPoint}) {
-    font-size: 2.1rem;
+    font-size: 2.3rem;
   }
 `;
 
@@ -66,7 +64,6 @@ const HeaderImage = styled(motion.img)`
   user-select: none;
   height: 277px;
   width: auto;
-  margin: 15px;
   cursor: pointer;
 
   @media screen and (max-width: ${smallBreakPoint}) {
