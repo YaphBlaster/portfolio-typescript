@@ -5,6 +5,7 @@ import styled from "styled-components/macro";
 import Title from "../Title";
 import { ISkill } from "../../interfaces/interfaces";
 import FadeIn from "../FadeIn/FadeIn";
+import { smallBreakPoint } from "../../constants";
 
 const ElementStyled = styled(Element)`
   width: 100%;
@@ -15,10 +16,15 @@ const ElementStyled = styled(Element)`
 
 const SkillsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   max-width: 850px;
-  grid-gap: 10px;
+  grid-gap: 30px;
   width: 100%;
+
+  @media screen and (max-width: ${smallBreakPoint}) {
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
 `;
 
 interface Props {
@@ -28,8 +34,8 @@ interface Props {
 const Skills = ({ skills }: Props) => {
   return (
     <FadeIn>
+      <Title>Skills</Title>
       <ElementStyled name="skills">
-        <Title>Skills</Title>
         <SkillsContainer>
           {skills.map((skill, index) => (
             <Skill {...skill} key={index} />

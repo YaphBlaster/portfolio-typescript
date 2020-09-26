@@ -9,7 +9,7 @@ const NavLink = styled(motion.button)`
   background-color: transparent;
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.2em;
   -webkit-tap-highlight-color: transparent;
 
   :focus {

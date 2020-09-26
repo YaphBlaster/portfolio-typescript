@@ -1,19 +1,23 @@
 import React from "react";
 import styled from "styled-components/macro";
+import { smallBreakPoint } from "../../constants";
 import { summary } from "../../data/UserInfo";
 import FadeIn from "../FadeIn/FadeIn";
 
-const Desc = styled.div`
+const Text = styled.div`
   font-size: 1.2em;
   line-height: 30px;
-  font-weight: 400;
-  padding: 15px;
+  transition: 0.2s linear all;
+
+  @media screen and (max-width: ${smallBreakPoint}) {
+    font-size: 1.1rem;
+  }
 `;
 
 const Description = () => {
   return (
     <FadeIn>
-      <Desc>{summary}</Desc>
+      <Text>{summary}</Text>
     </FadeIn>
   );
 };
