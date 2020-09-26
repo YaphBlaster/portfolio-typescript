@@ -58,12 +58,12 @@ const Description = styled.div`
 const Image = styled.img`
   width: 175px;
   height: 175px;
-  margin: 15px;
+  margin: 5px;
+  box-sizing: border-box;
   margin-bottom: 5px;
+  box-shadow: 0 0 1px 0 gray inset, 0 0 1px 0 gray;
   border-radius: 50%;
-  border-color: #575757;
-  border-style: double;
-  border-width: 6.5px;
+  border: 0.4em double rgb(43 43 43 / 0.7);
   transition: 0.2s linear all;
   image-rendering: optimizeSpeed; /* STOP SMOOTHING, GIVE ME SPEED  */
   image-rendering: -moz-crisp-edges; /* Firefox                        */

@@ -10,11 +10,10 @@ const NavWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   border: none;
-  max-width: 400px;
   margin-bottom: 20px;
   font-size: 20px;
-  width: 100vw;
   align-items: center;
+  justify-content: center;
 
   > a,
   > button {
