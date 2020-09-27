@@ -21,6 +21,7 @@ const ProjectLink = ({ link, icon }: Props) => {
   return (
     <AnchorMotion
       href={link}
+      target="_blank"
       whileHover={{
         rotate: [0, 10, 0, -10, 0, 10, 0, -10, 0],
         transition: { duration: 0.4 },

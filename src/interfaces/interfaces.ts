@@ -4,7 +4,7 @@ export interface IProject {
   imageDescription?: string | undefined;
   description: string;
   techStack: string[];
-  codeLink?: string;
+  codeLink?: string[] | string;
   demoLink?: string;
   year: number;
 }
@@ -12,5 +12,4 @@ export interface IProject {
 export interface ISkill {
   name: string;
   image: string;
-  url?: string;
 }
