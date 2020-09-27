@@ -66,15 +66,7 @@ export const projects = [
     title: "Claims Fast Track",
     description:
       "Made in ReactJS, Claims Fast Track is an application made to streamline the claims process. Built for adjusters, this application allows them to add customers, claims, estimates and manage the status of a claim. Adjusters can also send a custom URL to a client where they can add images of a damaged asset at the their convenience to be later viewed by the adjuster.",
-    techStack: [
-      "ReactJS",
-      "Redux",
-      "Sass",
-      "Javascript",
-      "HTML5",
-      "CSS3",
-      "AWS",
-    ],
+    techStack: ["ReactJS", "Redux", "Sass", "Javascript", "AWS"],
     year: 2018,
     image: wawanesa,
   },
@@ -120,15 +112,7 @@ export const projects = [
     title: "Wawanesa Innovation Dashboard",
     description:
       "Developed in ReactJS, this web application is used as a central hub for the prototypes made in Wawanesa's Innovation Lab. The Innovation Lab is heavily focused on creating insurance solutions using the most cutting edge technologies, however, these technologies are backend heavy so the Innovation Dashboard was created to give a face to all the proof of concepts at the lab. As the Lead Developer for this project, I mentored junior developers to learn ReactJS, established version control workflows and  set up the groundwork to expedite tedious tasks such as routing, component building, and hosting/deployment solutions.",
-    techStack: [
-      "ReactJS",
-      "Redux",
-      "Sass",
-      "Javascript",
-      "HTML5",
-      "CSS3",
-      "AWS",
-    ],
+    techStack: ["ReactJS", "Redux", "Sass", "Javascript", "AWS"],
     year: 2018,
     image: innovationLab,
   },
@@ -136,7 +120,7 @@ export const projects = [
     title: "Prequel Memes",
     description:
       "A web application developed in React. This application was made to streamline the process of creating images for social media. The user can choose a character and will be given multiple screenshots that are pulled from a server where that character is featured. The user can then choose to add text and then finally create an image with their text implanted onto it.",
-    techStack: ["ReactJS", "Redux", "Sass", "Javascript", "HTML5", "CSS3"],
+    techStack: ["ReactJS", "Redux", "Sass", "Javascript"],
     codeLink: "https://github.com/YaphBlaster/pm3",
     demoLink: "http://www.prequelmemes.com",
     year: 2018,
