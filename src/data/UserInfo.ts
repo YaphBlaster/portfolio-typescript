@@ -97,22 +97,22 @@ export const projects = [
       "Styled Components",
       "Python",
       "Serverless",
-      "AWS Lambda",
+      "Amazon Web Services",
     ],
-    codeLink: "https://github.com/YaphBlaster/hypemoji",
-    // "https://github.com/YaphBlaster/hypemoji_sls",
-
+    codeLink: [
+      "https://github.com/YaphBlaster/hypemoji",
+      "https://github.com/YaphBlaster/hypemoji_sls",
+    ],
     demoLink: "http://hypemoji.surge.sh/",
-
     year: 2019,
     image: hypemoji,
   },
   {
     title: "Portfolio",
     description:
-      "This website! I wanted some more experience working with ReactJS, TypeScript, and web in general so I decided a portfolio page would be a great learning experience! Feel free to view the github repository linked on the side.",
+      "This website! I wanted some more experience working with ReactJS, TypeScript, and web in general so I decided a portfolio page would be a great learning experience! Feel free to view the github repository linked on the top right corner.",
     techStack: ["ReactJS", "TypeScript", "Styled Components", "Netlify"],
-    codeLink: "https://github.com/YaphBlaster/Portfolio",
+    codeLink: "https://github.com/YaphBlaster/portfolio-typescript",
     year: 9999,
     image: portfolioImages[Math.floor(Math.random() * portfolioImages.length)],
   },
@@ -139,7 +139,6 @@ export const projects = [
     techStack: ["ReactJS", "Redux", "Sass", "Javascript", "HTML5", "CSS3"],
     codeLink: "https://github.com/YaphBlaster/pm3",
     demoLink: "http://www.prequelmemes.com",
-
     year: 2018,
     image: prequelMemes,
   },
@@ -173,71 +172,57 @@ export const skillList = [
   {
     name: "React",
     image: react,
-    url: "",
   },
   {
     name: "Redux",
     image: redux,
-    url: "",
   },
   {
     name: "Styled Components",
     image: styledComponents,
-    url: "",
   },
   {
     name: "JavaScript",
     image: javaScript,
-    url: "",
   },
   {
     name: "TypeScript",
     image: typeScript,
-    url: "",
   },
   {
     name: "Framer Motion",
     image: framer,
-    url: "",
   },
   {
     name: "Figma",
     image: figma,
-    url: "",
   },
   {
     name: "Python",
     image: python,
-    url: "",
   },
   {
     name: "Amazon Web Services",
     image: amazonAws,
-    url: "",
   },
   {
     name: "Serverless",
     image: serverless,
-    url: "",
   },
   {
     name: "C Sharp",
     image: csharp,
-    url: "",
   },
   {
     name: "Godot",
     image: godotEngine,
-    url: "",
   },
   {
     name: "Unreal Engine",
     image: unrealEngine,
-    url: "",
   },
   {
     name: "Unity",
     image: unity,
-    url: "",
   },
 ];

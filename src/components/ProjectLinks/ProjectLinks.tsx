@@ -16,15 +16,29 @@ const Container = styled.div`
 `;
 
 interface Props {
-  codeLink?: string;
+  codeLink?: string | string[];
   demoLink?: string;
 }
 
 const ProjectLinks = ({ codeLink, demoLink }: Props) => {
+  if (codeLink) {
+    console.log(codeLink.length);
+  }
+
+  const checkType = () => {
+    if (Array.isArray(codeLink)) {
+      return codeLink.map((link, index) => (
+        <ProjectLink link={link} icon={GithubIcon} key={index} />
+      ));
+    } else {
+      return <ProjectLink link={codeLink} icon={GithubIcon} />;
+    }
+  };
+
   return (
     <Container>
       {demoLink && <ProjectLink link={demoLink} icon={HyperLinkIcon} />}
-      {codeLink && <ProjectLink link={codeLink} icon={GithubIcon} />}
+      {codeLink && checkType()}
     </Container>
   );
 };
