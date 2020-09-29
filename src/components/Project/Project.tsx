@@ -9,6 +9,7 @@ const Layout = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
+  margin-top: 10px;
 
   @media screen and (max-width: ${mediumBreakPoint}) {
     flex-direction: column;
@@ -32,7 +33,7 @@ const Tile = styled.div`
   box-shadow: 8px 4px 15px 5px #1111110d;
   box-shadow: 8px 4px 15px 5px #0000000d;
   text-align: center;
-  padding: 30px;
+  padding: 25px;
   position: relative;
 `;
 
