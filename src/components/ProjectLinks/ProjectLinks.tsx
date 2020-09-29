@@ -2,16 +2,21 @@ import React from "react";
 import styled from "styled-components/macro";
 import HyperLinkIcon from "../../assets/externalLink.svg";
 import GithubIcon from "../../assets/gitHubIcon.svg";
+import { smallBreakPoint } from "../../constants";
 import ProjectLink from "../ProjectLink/ProjectLink";
 
 const Container = styled.div`
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  top: 10px;
-  right: 20px;
+  right: 10px;
+  top: 5px;
   > a {
-    margin: 3px;
+    margin: 5px;
+  }
+
+  @media screen and (max-width: ${smallBreakPoint}) {
+    flex-direction: column;
   }
 `;
 
