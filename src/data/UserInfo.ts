@@ -57,8 +57,8 @@ export const projects = [
     techStack: ["Unity", "Mecanim", "C#", "Vuforia"],
     year: 2019,
     image: arHouse,
-    codeLink:
-      "https://s3-us-west-2.amazonaws.com/yaphet-uploaded-files/Wawanesa_AR_House.apk",
+    // codeLink:
+    //   "https://s3-us-west-2.amazonaws.com/yaphet-uploaded-files/Wawanesa_AR_House.apk",
 
     demoLink: "https://www.youtube.com/watch?v=E9lGHy3dBO0",
   },
