@@ -26,10 +26,6 @@ interface Props {
 }
 
 const ProjectLinks = ({ codeLink, demoLink }: Props) => {
-  if (codeLink) {
-    console.log(codeLink.length);
-  }
-
   const checkType = () => {
     if (Array.isArray(codeLink)) {
       return codeLink.map((link, index) => (
