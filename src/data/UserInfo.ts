@@ -25,10 +25,7 @@ import arHouse from "../assets/projectThumbnails/ARHouse.webp";
 // import peggoARImage from "../assets/projectThumbnails/PeggoARImage.webp";
 import ReactCrashCourse from "../assets/projectThumbnails/ReactLogo.webp";
 
-import portfolio from "../assets/jacket.svg";
-import portfolio2 from "../assets/tie.svg";
-import portfolio3 from "../assets/sweater.svg";
-const portfolioImages = [portfolio, portfolio2, portfolio3];
+export const portfolioImageFileNames = ["sweater.svg", "tie.svg", "jacket.svg"];
 
 export const fontAndAccentColour = "#2b2b2b";
 
@@ -106,7 +103,7 @@ export const projects = [
     techStack: ["ReactJS", "TypeScript", "Styled Components", "Netlify"],
     codeLink: "https://github.com/YaphBlaster/portfolio-typescript",
     year: 9999,
-    image: portfolioImages[Math.floor(Math.random() * portfolioImages.length)],
+    image: `${process.env.PUBLIC_URL}/images/${portfolioImageFileNames[Math.floor(Math.random() * portfolioImageFileNames.length)]}`,
   },
   {
     title: "Wawanesa Innovation Dashboard",

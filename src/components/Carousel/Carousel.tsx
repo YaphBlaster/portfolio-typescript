@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from "react";
-import ProfilePhoto from "../../assets/sweater.svg";
-import ProfilePhoto2 from "../../assets/tie.svg";
-import ProfilePhoto3 from "../../assets/jacket.svg";
+import React, { useState } from "react";
 import styled from "styled-components/macro";
 import { AnimatePresence, motion } from "framer-motion";
 import { name as userInfoName } from "../../data/UserInfo";
@@ -9,6 +6,8 @@ import { name as userInfoName } from "../../data/UserInfo";
 import { wrap } from "@popmotion/popcorn";
 import FadeIn from "../FadeIn/FadeIn";
 import { smallBreakPoint } from "../../constants";
+
+import { portfolioImageFileNames } from "../../data/UserInfo";
 
 const variants = {
   enter: {
@@ -73,19 +72,7 @@ const HeaderImage = styled(motion.img)`
 
 const Carousel = () => {
   const [page, setPage] = useState(0);
-  const [hasPreloadedImages, setHasPreloadedImages] = useState(false);
-  const images = [ProfilePhoto, ProfilePhoto2, ProfilePhoto3];
-
-  useEffect(() => {
-    if (!hasPreloadedImages) {
-      images.forEach((picture) => {
-        const img = new Image();
-        img.src = picture;
-      });
-    } else {
-      setHasPreloadedImages(true);
-    }
-  }, [images, hasPreloadedImages]);
+  const images = ["jacket.svg", "sweater.svg", "tie.svg"];
 
   const handleClick = () => {
     setPage(page + 1);
@@ -103,7 +90,7 @@ const Carousel = () => {
       <HeaderWrapper>
         <AnimatePresence initial={false} exitBeforeEnter>
           <HeaderImage
-            src={images[imageIndex]}
+            src={`${process.env.PUBLIC_URL}/images/${portfolioImageFileNames[imageIndex]}`}
             onClick={handleClick}
             key={page}
             variants={variants}

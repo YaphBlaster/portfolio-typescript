@@ -50,10 +50,6 @@ const Title = styled.div`
 const Description = styled.div`
   flex-grow: 1;
   margin-bottom: 20px;
-
-  @media screen and (max-width: ${mediumBreakPoint}) {
-    text-align: center;
-  }
 `;
 
 const Image = styled.img`
