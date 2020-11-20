@@ -8,13 +8,9 @@ import Project from "../Project/Project";
 import Title from "../Title";
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
+  display: grid;
+  grid-gap: 20px;
 
-  > div {
-    margin: 10px;
-  }
 `;
 
 interface Props {
