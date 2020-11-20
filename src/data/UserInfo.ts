@@ -22,6 +22,7 @@ import innovationLab from "../assets/projectThumbnails/InnovationLab.webp";
 import wawanesa from "../assets/projectThumbnails/WawanesaLogo.svg";
 import hypemoji from "../assets/projectThumbnails/HypeMoji.webp";
 import arHouse from "../assets/projectThumbnails/ARHouse.webp";
+import iQmetrix from "../assets/projectThumbnails/iQmetrix.webp";
 // import peggoARImage from "../assets/projectThumbnails/PeggoARImage.webp";
 import ReactCrashCourse from "../assets/projectThumbnails/ReactLogo.webp";
 
@@ -40,6 +41,14 @@ Thanks for visiting my portfolio and please check out my projects down below!`;
 export const name = "Yaphet Abraha";
 
 export const projects = [
+  {
+    title: "Aether",
+    description:
+      "Frontend application built with React. This application was created as an option for customers to pay for merchandise with zero physical contact. A store associate can send an Aether link to a customer, who can complete a purchase on their mobile phone or computer. Customers can pay via manual card entry, Google Pay or Apple Pay.",
+    techStack: ["ReactJS", "JavaScript", "Styled Components"],
+    year: 2020,
+    image: iQmetrix,
+  },
   {
     title: "React Crash Course",
     description:
