@@ -58,7 +58,6 @@ const tech = {
   CSHARP: "C Sharp",
   VUFORIA: "Vuforia",
   ELECTRON: "Electron"
-
 }
 
 export const projects = [
@@ -89,7 +88,6 @@ export const projects = [
     image: arHouse,
     // codeLink:
     //   "https://s3-us-west-2.amazonaws.com/yaphet-uploaded-files/Wawanesa_AR_House.apk",
-
     demoLink: "https://www.youtube.com/watch?v=E9lGHy3dBO0",
   },
   {
@@ -111,7 +109,7 @@ export const projects = [
   {
     title: "Hypemoji",
     description:
-      "With ReactJS running the frontend and Serverless + Amazon Web Services in the backend, this application traverses Snapchat's Bitmoji API to create custom Bitmoji comics with text input from the user. Users also can copy and paste their Bitmoji url into the application and be granted access to all Bitmoji and Friendmoji images to edit and share! An Electron branch of this project can be found in the link above.",
+      "With ReactJS running the frontend and Serverless + Amazon Web Services in the backend, this application traverses Snapchat's Bitmoji API to create custom Bitmoji comics with text input from the user. Users also can copy and paste their Bitmoji url into the application and be granted access to all Bitmoji and Friendmoji images to edit and share! A link to an Electron branch of this project can be found in the top right corner.",
     techStack: [
       tech.REACT,
       tech.REDUX,
@@ -123,9 +121,10 @@ export const projects = [
       tech.ELECTRON
     ],
     codeLink: [
+      "https://github.com/YaphBlaster/hypemoji_sls",
       "https://github.com/YaphBlaster/hypemoji",
       "https://github.com/YaphBlaster/hypemoji/tree/electron",
-      "https://github.com/YaphBlaster/hypemoji_sls",
+
     ],
     demoLink: "http://hypemoji.surge.sh/",
     year: 2019,
