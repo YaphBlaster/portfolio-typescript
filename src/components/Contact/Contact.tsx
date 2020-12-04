@@ -1,6 +1,6 @@
 import React from "react";
 import { Element } from "react-scroll";
-import styled from "@emotion/styled";
+import styled from "@emotion/styled/macro";
 import gitHubIcon from "../../assets/gitHubIcon.svg";
 import linkedinIcon from "../../assets/linkedIn.svg";
 import emailIcon from "../../assets/email.svg";

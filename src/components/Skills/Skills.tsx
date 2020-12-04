@@ -1,7 +1,7 @@
 import React from "react";
 import { Element } from "react-scroll";
 import Skill from "../Skill/Skill";
-import styled from "@emotion/styled";
+import styled from "@emotion/styled/macro";
 import Title from "../Title";
 import { ISkill } from "../../interfaces/interfaces";
 import FadeIn from "../FadeIn/FadeIn";

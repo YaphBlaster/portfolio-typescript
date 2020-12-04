@@ -1,6 +1,6 @@
 import React from "react";
 import { Element } from "react-scroll";
-import styled from "@emotion/styled";
+import styled from "@emotion/styled/macro";
 import { IProject } from "../../interfaces/interfaces";
 import FadeIn from "../FadeIn/FadeIn";
 

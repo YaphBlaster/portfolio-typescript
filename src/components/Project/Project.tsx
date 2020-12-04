@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import styled from "@emotion/styled/macro";
 import TechBox from "../TechBox/TechBox";
 import ProjectLinks from "../ProjectLinks/ProjectLinks";
 import { mediumBreakPoint, smallBreakPoint } from "../../constants";

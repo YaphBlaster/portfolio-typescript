@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import styled from "@emotion/styled";
+import styled from "@emotion/styled/macro";
 
 const Container = styled.div`
   font-size: 1.75em;

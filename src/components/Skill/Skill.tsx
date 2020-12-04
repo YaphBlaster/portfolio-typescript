@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import styled from "@emotion/styled/macro";
 import { motion } from "framer-motion";
 import { ISkill } from "../../interfaces/interfaces";
 import { ReactSVG } from "react-svg";

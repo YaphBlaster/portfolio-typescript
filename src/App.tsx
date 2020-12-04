@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import styled from "@emotion/styled/macro";
 import Navbar from "./components/Navbar/Navbar";
 import Carousel from "./components/Carousel/Carousel";
 import Description from "./components/Description/Description";
