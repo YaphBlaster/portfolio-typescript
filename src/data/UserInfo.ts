@@ -163,7 +163,7 @@ export const projects = [
   {
     title: "Hall of Fame VR Invitation",
     description:
-      "This app was created to invite members to the 2016 Canadian Sports Hall of Fame induction using Google Cardboard/VR. Upon putting a device in a vr headset, users find themselves in a full auditorium where they would be invited to the sports event via a video playing on a theatre screen",
+      "This app was created to invite members to the 2016 Canadian Sports Hall of Fame induction using Google Cardboard/VR. Upon putting a device in a vr headset, users find themselves in a full auditorium where they would be invited to the sports event via a video playing on a theatre screen.",
     techStack: [tech.CSHARP, tech.UNITY, tech.GOOGLE_VR],
     year: 2016,
     image: CSHOF,
