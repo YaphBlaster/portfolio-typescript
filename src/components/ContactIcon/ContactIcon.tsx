@@ -3,6 +3,7 @@ import styled from "@emotion/styled/macro";
 import { motion } from "framer-motion";
 import { ReactSVG } from "react-svg";
 import { fontAndAccentColour } from "../../data/UserInfo";
+import { smallBreakPoint } from "../../constants";
 
 const LinkIcon = styled.div`
   fill: ${fontAndAccentColour};
@@ -10,6 +11,13 @@ const LinkIcon = styled.div`
     transition: 0.2s linear all;
     height: 60px;
     width: 60px;
+  }
+
+  @media screen and (max-width: ${smallBreakPoint}) {
+    svg {
+      height: 45px;
+      width: 45px;
+    }
   }
 `;
 

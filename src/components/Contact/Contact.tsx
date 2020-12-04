@@ -16,12 +16,7 @@ const IconContainer = styled.div`
   margin: 0 auto;
 
   @media screen and (max-width: ${smallBreakPoint}) {
-    width: 180px;
-
-    svg {
-      height: 45px;
-      width: 45px;
-    }
+    width: 190px;
   }
 `;
 
