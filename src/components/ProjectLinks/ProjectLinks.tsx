@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components/macro";
+import styled from "@emotion/styled";
 import HyperLinkIcon from "../../assets/externalLink.svg";
 import GithubIcon from "../../assets/gitHubIcon.svg";
 import { smallBreakPoint } from "../../constants";

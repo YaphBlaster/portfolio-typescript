@@ -1,6 +1,6 @@
 import React from "react";
 import { scroller } from "react-scroll";
-import styled from "styled-components/macro";
+import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 
 const NavLink = styled(motion.button)`

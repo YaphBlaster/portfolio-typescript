@@ -1,6 +1,6 @@
 import React from "react";
 import * as resumeLink from "../../resume.pdf";
-import styled from "styled-components/macro";
+import styled from "@emotion/styled";
 import NavItem from "../NavItem/NavItem";
 import { smallBreakPoint } from "../../constants";
 import FadeIn from "../FadeIn/FadeIn";

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components/macro";
+import styled from "@emotion/styled";
 import { AnimatePresence, motion } from "framer-motion";
 import { name as userInfoName } from "../../data/UserInfo";
 

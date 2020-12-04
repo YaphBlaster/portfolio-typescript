@@ -1,10 +1,10 @@
 import React from "react";
-import styled from "styled-components/macro";
+import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { ReactSVG } from "react-svg";
 import { fontAndAccentColour } from "../../data/UserInfo";
 
-const LinkIcon = styled(ReactSVG)`
+const LinkIcon = styled.div`
   fill: ${fontAndAccentColour};
   svg {
     transition: 0.2s linear all;
@@ -32,7 +32,9 @@ const ContactIcon = ({ href, icon, isEmail = false }: Props) => {
           transition: { duration: 0.4 },
         }}
       >
-        <LinkIcon src={icon} />
+        <LinkIcon>
+          <ReactSVG src={icon} />
+        </LinkIcon>
       </motion.div>
     </a>
   );

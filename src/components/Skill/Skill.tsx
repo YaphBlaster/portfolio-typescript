@@ -1,11 +1,11 @@
 import React from "react";
-import styled from "styled-components/macro";
+import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { ISkill } from "../../interfaces/interfaces";
 import { ReactSVG } from "react-svg";
 import { smallBreakPoint } from "../../constants";
 
-const Logo = styled(ReactSVG)`
+const Logo = styled.div`
   svg {
     height: 72px;
     width: 72px;
@@ -41,7 +41,9 @@ const Skill = ({ name, image }: ISkill) => {
           transition: { duration: 0.1, ease: "easeInOut" },
         }}
       >
-        <Logo src={image} />
+        <Logo>
+          <ReactSVG src={image} />
+        </Logo>
       </LogoContainer>
       <Text>{name}</Text>
     </Container>

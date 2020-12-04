@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components/macro";
+import styled from "@emotion/styled";
 import { smallBreakPoint } from "../../constants";
 import { summary } from "../../data/UserInfo";
 import FadeIn from "../FadeIn/FadeIn";
