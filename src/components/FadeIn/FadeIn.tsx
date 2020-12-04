@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import styled from "styled-components/macro";
+import styled from "@emotion/styled";
 
 const Motion = styled(motion.div)`
   width: 100%;

@@ -1,10 +1,10 @@
 import React from "react";
-import styled from "styled-components/macro";
+import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { ReactSVG } from "react-svg";
 import { fontAndAccentColour } from "../../data/UserInfo";
 
-const Icon = styled(ReactSVG)`
+const Icon = styled.div`
   width: 40px;
   height: 40px;
   fill: ${fontAndAccentColour};
@@ -27,12 +27,14 @@ const ProjectLink = ({ link, icon }: Props) => {
         transition: { duration: 0.4 },
       }}
     >
-      <Icon
-        src={icon}
-        beforeInjection={(svg: any) => {
-          svg.setAttribute("style", "width: 40px; height: 40px;");
-        }}
-      />
+      <Icon>
+        <ReactSVG
+          src={icon}
+          beforeInjection={(svg: any) => {
+            svg.setAttribute("style", "width: 40px; height: 40px;");
+          }}
+        />
+      </Icon>
     </AnchorMotion>
   );
 };

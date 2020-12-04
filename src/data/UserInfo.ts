@@ -54,10 +54,14 @@ const tech = {
   PYTHON: "Python",
   OCULUS: "Oculus",
   STYLED_COMPONENTS: "Styled Components",
+  UNREAL: "Unreal Engine",
   UNITY: "Unity",
   CSHARP: "C Sharp",
   VUFORIA: "Vuforia",
-  ELECTRON: "Electron"
+  ELECTRON: "Electron",
+  FRAMER_MOTION: "Framer Motion",
+  FIGMA: "Figma",
+  GODOT: "Godot",
 }
 
 export const projects = [
@@ -184,67 +188,67 @@ export const projects = [
 
 export const skillList = [
   {
-    name: "React",
+    name: tech.REACT,
     image: react,
   },
   {
-    name: "Redux",
+    name: tech.REDUX,
     image: redux,
   },
   {
-    name: "Styled Components",
+    name: tech.STYLED_COMPONENTS,
     image: styledComponents,
   },
   {
-    name: "JavaScript",
+    name: tech.JAVASCRIPT,
     image: javaScript,
   },
   {
-    name: "TypeScript",
+    name: tech.TYPESCRIPT,
     image: typeScript,
   },
   {
-    name: "Electron",
+    name: tech.ELECTRON,
     image: electron,
   },
   {
-    name: "NodeJS",
+    name: tech.NODE_JS,
     image: nodejs
   },
   {
-    name: "Framer Motion",
+    name: tech.FRAMER_MOTION,
     image: framer,
   },
   {
-    name: "Figma",
+    name: tech.FIGMA,
     image: figma,
   },
   {
-    name: "Python",
+    name: tech.PYTHON,
     image: python,
   },
   {
-    name: "Amazon Web Services",
+    name: tech.AWS,
     image: amazonAws,
   },
   {
-    name: "Serverless",
+    name: tech.SERVERLESS,
     image: serverless,
   },
   {
-    name: "C Sharp",
+    name: tech.CSHARP,
     image: csharp,
   },
   {
-    name: "Godot",
+    name: tech.GODOT,
     image: godotEngine,
   },
   {
-    name: "Unreal Engine",
+    name: tech.UNREAL,
     image: unrealEngine,
   },
   {
-    name: "Unity",
+    name: tech.UNITY,
     image: unity,
   },
 ];

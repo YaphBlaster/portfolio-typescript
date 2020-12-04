@@ -1,6 +1,6 @@
 import React from "react";
 import { Element } from "react-scroll";
-import styled from "styled-components/macro";
+import styled from "@emotion/styled";
 import { IProject } from "../../interfaces/interfaces";
 import FadeIn from "../FadeIn/FadeIn";
 
@@ -10,7 +10,6 @@ import Title from "../Title";
 const Container = styled.div`
   display: grid;
   grid-gap: 20px;
-
 `;
 
 interface Props {
