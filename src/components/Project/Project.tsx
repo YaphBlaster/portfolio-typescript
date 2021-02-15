@@ -53,7 +53,8 @@ const Description = styled.div`
 `;
 
 const Image = styled.img`
-  width: 175px;
+  width: 100%;
+  max-width: 175px;
   height: 175px;
   margin: 5px;
   box-sizing: border-box;
