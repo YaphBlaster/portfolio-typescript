@@ -14,6 +14,7 @@ import javaScript from "../assets/logos/javascript.svg";
 import typeScript from "../assets/logos/typescript.svg";
 import electron from "../assets/logos/electron.svg";
 import nodejs from "../assets/logos/nodejs.svg";
+import reactQuery from "../assets/logos/reactquery.svg";
 
 import prequelMemes from "../assets/projectThumbnails/PrequelMemes.webp";
 import wowVr from "../assets/projectThumbnails/WowVr.webp";
@@ -24,7 +25,7 @@ import innovationLab from "../assets/projectThumbnails/InnovationLab.webp";
 import wawanesa from "../assets/projectThumbnails/WawanesaLogo.svg";
 import hypemoji from "../assets/projectThumbnails/HypeMoji.webp";
 import arHouse from "../assets/projectThumbnails/ARHouse.webp";
-import iQmetrix from "../assets/projectThumbnails/iQmetrix.webp";
+import iQmetrixGradient from "../assets/projectThumbnails/iQmetrixGradient.webp";
 // import peggoARImage from "../assets/projectThumbnails/PeggoARImage.webp";
 import ReactCrashCourse from "../assets/projectThumbnails/ReactLogo.webp";
 
@@ -62,16 +63,38 @@ const tech = {
   FRAMER_MOTION: "Framer Motion",
   FIGMA: "Figma",
   GODOT: "Godot",
-}
+  REACT_QUERY: "React Query",
+};
 
-export const projects = [
+export const projects: {
+  title: string;
+  description: string;
+  techStack: string[];
+  year: number;
+  image: any;
+  codeLink?: string | string[];
+  demoLink?: string;
+}[] = [
+  {
+    title: "Beam TNG",
+    description:
+      "With React for the frontend and .NET Core for the backend. This application was built to be the successor to the original Beam project to aid administrators in the manual process of onboarding new clients to iQmetrix’s payments solution. As the lead frontend developer on this project, I was responsible for all aspects of the frontend including project structuring, UX/UI design, dynamic routing solutions, data fetching/management solutions and working with my team lead to discuss request/response flow between the frontend and backend.",
+    techStack: [
+      tech.REACT,
+      tech.REACT_QUERY,
+      tech.TYPESCRIPT,
+      tech.STYLED_COMPONENTS,
+    ],
+    year: 2021,
+    image: iQmetrixGradient,
+  },
   {
     title: "Aether",
     description:
       "Frontend application built with React and .NET Core in the backend. This application was created as an option for customers to pay for merchandise with zero physical contact. A store associate can send an Aether link to a customer, who can complete a purchase on their mobile phone or computer. Customers can pay via manual card entry, Google Pay or Apple Pay.",
     techStack: [tech.REACT, tech.JAVASCRIPT, tech.STYLED_COMPONENTS],
     year: 2020,
-    image: iQmetrix,
+    image: iQmetrixGradient,
   },
   {
     title: "React Crash Course",
@@ -98,7 +121,14 @@ export const projects = [
     title: "Claims Fast Track",
     description:
       "With ReactJS in the frontend and Serverless with a NodeJS runtime in the backend, Claims Fast Track is an application made to streamline the claims process. Built for adjusters, this application allows them to add customers, claims, estimates and manage the status of a claim. Adjusters can also send a custom URL to a client where they can add images of a damaged asset at the their convenience to be later viewed by the adjuster.",
-    techStack: [tech.REACT, tech.REDUX, tech.SASS, tech.JAVASCRIPT, tech.AWS, tech.NODE_JS],
+    techStack: [
+      tech.REACT,
+      tech.REDUX,
+      tech.SASS,
+      tech.JAVASCRIPT,
+      tech.AWS,
+      tech.NODE_JS,
+    ],
     year: 2018,
     image: wawanesa,
   },
@@ -106,7 +136,13 @@ export const projects = [
     title: "WowVR",
     description:
       "WOWVR is a fun and creative tool that allows you to design your dream patio with Outdoor living products in a fully 3D environment. With over 100+ high definition products to choose from including BBQs, Seating, Tables, Rugs, Accessories, Umbrellas and Gazebos, you can arrange them into ANY possible way that fits your Outdoor lifestyle. Want to see your design up-close? Using WOWVR’s built-in Virtual Reality engine, you can take a virtual walk through your patio designs in a fully immersive 3D environment. WOWVR also supports Google Cardboard viewers, so you can get a Fully Immersive VR Experience using your mobile device.",
-    techStack: [tech.CSHARP, tech.UNITY, tech.GOOGLE_VR, tech.ANDROID, tech.IOS],
+    techStack: [
+      tech.CSHARP,
+      tech.UNITY,
+      tech.GOOGLE_VR,
+      tech.ANDROID,
+      tech.IOS,
+    ],
     year: 2016,
     image: wowVr,
   },
@@ -122,13 +158,12 @@ export const projects = [
       tech.PYTHON,
       tech.SERVERLESS,
       tech.AWS,
-      tech.ELECTRON
+      tech.ELECTRON,
     ],
     codeLink: [
       "https://github.com/YaphBlaster/hypemoji_sls",
       "https://github.com/YaphBlaster/hypemoji",
       "https://github.com/YaphBlaster/hypemoji/tree/electron",
-
     ],
     demoLink: "http://hypemoji.surge.sh/",
     year: 2019,
@@ -141,7 +176,11 @@ export const projects = [
     techStack: [tech.REACT, "TypeScript", tech.STYLED_COMPONENTS],
     codeLink: "https://github.com/YaphBlaster/portfolio-typescript",
     year: 9999,
-    image: `${process.env.PUBLIC_URL}/images/${portfolioImageFileNames[Math.floor(Math.random() * portfolioImageFileNames.length)]}`,
+    image: `${process.env.PUBLIC_URL}/images/${
+      portfolioImageFileNames[
+        Math.floor(Math.random() * portfolioImageFileNames.length)
+      ]
+    }`,
   },
   {
     title: "Wawanesa Innovation Dashboard",
@@ -155,7 +194,13 @@ export const projects = [
     title: "Prequel Memes",
     description:
       "A web application developed in React for the frontend and NodeJS for the backend. This application was made to streamline the process of creating images for social media. The user can choose a character and will be given multiple screenshots that are pulled from a server where that character is featured. The user can then choose to add text and then finally create an image with their text implanted onto it.",
-    techStack: [tech.REACT, tech.REDUX, tech.SASS, tech.JAVASCRIPT, tech.NODE_JS],
+    techStack: [
+      tech.REACT,
+      tech.REDUX,
+      tech.SASS,
+      tech.JAVASCRIPT,
+      tech.NODE_JS,
+    ],
     codeLink: "https://github.com/YaphBlaster/pm3",
     year: 2018,
     image: prequelMemes,
@@ -186,7 +231,7 @@ export const projects = [
   },
 ];
 
-export const skillList = [
+export const skillList: { name: string; image: string }[] = [
   {
     name: tech.REACT,
     image: react,
@@ -194,6 +239,10 @@ export const skillList = [
   {
     name: tech.REDUX,
     image: redux,
+  },
+  {
+    name: tech.REACT_QUERY,
+    image: reactQuery,
   },
   {
     name: tech.STYLED_COMPONENTS,
@@ -213,7 +262,7 @@ export const skillList = [
   },
   {
     name: tech.NODE_JS,
-    image: nodejs
+    image: nodejs,
   },
   {
     name: tech.FRAMER_MOTION,
